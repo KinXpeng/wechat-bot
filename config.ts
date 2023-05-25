@@ -1,4 +1,4 @@
-export default {
+export default <any>{
   groupList: ['FunnyModelPee'],
-  userList: []
+  userList: ['程前']
 }

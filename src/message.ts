@@ -24,7 +24,7 @@ export async function onMessage(msg: any) {
     }
   } else { // 个人消息
     // console.log(`个人消息=>>>: ContactID: ${contact.id} Contact: ${contact.name()} Text: ${text}`);
-    if (text && ['阿适'].includes(contact.name())) {
+    if (text && config.userList.includes(contact.name())) {
       // console.log(`个人消息=>>>: ContactID: ${contact.id} Contact: ${contact.name()} Text: ${text}`)
       const responseInfo: any = await sendMessage(text, prevID)
       const [responseText, parentMessageId] = responseInfo.split('\u0000')
