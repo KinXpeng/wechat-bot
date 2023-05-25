@@ -14,7 +14,7 @@ export async function onMessage(msg: any) {
     const mention = await msg.mentionSelf() // 被艾特的时候
 
     // console.log(`RoomID: ${room.id} Room: ${topic}  ContactID: ${contact.id} Contact: ${contact.name()} Text: ${text}`)
-    if (config.groupList.includes(topic) && !msg.self() && text.indexOf("@倾倾倾风") != -1) { // FunnyModelPee
+    if (config.groupList.includes(topic) && !msg.self() && text.indexOf(config.mention) != -1) { // FunnyModelPee
       // console.log(`Room: ${topic}  ContactID: ${contact.id} Contact: ${contact.name()} Text: ${text}`)
       // console.log('mention', mention, text);
       const responseInfo: any = await sendMessage(text, prevID)
